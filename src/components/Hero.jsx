@@ -44,8 +44,12 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-28 text-center mt-10">
         {/* Conference title */}
-        <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 drop-shadow-lg text-white">
-          TECHNO SOCIETAL <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-cyber-cyan)] to-[var(--color-cyber-purple)] drop-shadow-[0_0_15px_rgba(0,240,255,0.8)]">2026</span>
+        <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 drop-shadow-lg text-white flex flex-col items-center gap-2">
+          <span>TECHNO SOCIETAL</span>
+          <span className="relative inline-block">
+            <span className="absolute inset-0 bg-gradient-to-r from-[var(--color-cyber-cyan)] to-[var(--color-cyber-purple)] blur-xl opacity-80"></span>
+            <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-cyber-cyan)] to-[var(--color-cyber-purple)] drop-shadow-sm">2026</span>
+          </span>
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl font-medium mb-4 drop-shadow-md max-w-3xl mx-auto text-white/90">
