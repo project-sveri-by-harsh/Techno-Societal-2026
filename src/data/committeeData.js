@@ -1,0 +1,408 @@
+/* Full committee data extracted from Techno-Societal 2026 Office Order */
+
+export const COMMITTEES = [
+  {
+    id: 1,
+    name: 'Overall Coordination',
+    members: [
+      { name: 'Prof. Dr. B. P. Ronge', role: 'Founder of SVERI & Principal, COE Pandharpur' },
+      { name: 'Dr. S. B. Ronge', role: 'Secretary, SVERI' },
+      { name: 'Dr. Mrs. M. M. Pawar', role: 'Vice-Principal, COE Pandharpur' },
+      { name: 'Dr. M. M. Pawar', role: 'Campus In-charge' },
+      { name: 'Dr. P. M. Pawar', role: 'Degree Engg.' },
+      { name: 'Dr. N. D. Misal', role: 'Poly. Engg.' },
+      { name: 'Dr. M. G. Maniyar', role: 'B. Pharm.' },
+      { name: 'Dr. S. V. Mandave', role: 'D. Pharm.' },
+      { name: 'Dr. R. R. Gidde', role: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 2,
+    name: 'Invitations & Thanks Letters',
+    members: [
+      { name: 'Dr. D. S. Chaudhari', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Dr. V. V. More', role: 'Member', dept: 'B. Pharm.' },
+      { name: 'Mr. A. A. Garad', role: 'Member (Trustee)', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Schedule Preparation',
+    members: [
+      { name: 'Mr. M. S. Biswas', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Dr. S. K. Pandey', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. P. S. Valate', role: 'Member', dept: 'Poly. Engg.' },
+      { name: 'Dr. V. D. Jadhav', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. S. Gaikwad', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. G. K. Koshti', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 4,
+    name: 'Collection of Online/Offline Presentations',
+    members: [
+      { name: 'Dr. N. U. Kautkar', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Dr. D. B. Hanchate', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. Abhishek M. S.', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Ms. V. A. Sawant', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Ms. S. S. Patil', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 5,
+    name: 'Inauguration & Valedictory Function',
+    members: [
+      { name: 'Dr. S. S. Ghosh', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Ms. R. J. Shinde', role: 'Member', dept: 'B. Pharm.' },
+      { name: 'Ms. S. G. Gujare', role: 'Member', dept: 'B. Pharm.' },
+      { name: 'Mr. V. S. Gaikwad', role: 'Member', dept: 'B. Pharm.' },
+      { name: 'Mr. H. B. Bansode', role: 'Member', dept: 'B. Pharm.' },
+    ],
+    subGroups: [
+      {
+        name: 'Stage Preparations',
+        members: [
+          { name: 'Mr. K. S. Pukale', role: 'Coordinator', dept: 'Degree Engg.' },
+          { name: 'Mr. S. W. Torane', role: 'Member', dept: 'Poly. Engg.' },
+          { name: 'Ms. S. M. Ghodake', role: 'Member', dept: 'Poly. Engg.' },
+          { name: 'Mr. Y. D. Chavan', role: 'Member', dept: 'Poly. Engg.' },
+          { name: 'Ms. S. S. Bhosale', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Mr. S. W. Koli', role: 'Member', dept: 'Poly. Engg.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 6,
+    name: 'Hall Preparation for Sessions',
+    members: [
+      { name: 'Ms. S. Y. Abhangrao', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. Y. B. Survase', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Ms. K. K. Survase', role: 'Member', dept: 'D. Pharm.' },
+      { name: 'Ms. S. V. Kaulagi', role: 'Member', dept: 'D. Pharm.' },
+      { name: 'Mr. B. S. Surwase', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. B. Mane', role: 'Member', dept: 'Poly. Engg.' },
+    ],
+  },
+  {
+    id: 7,
+    name: 'Keynote Sessions & Participants Presentations',
+    members: [
+      { name: 'Dr. S. S. Wangikar', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Dr. Mrs. D. A. Tamboli', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. P. R. Bamane', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. A. M. Dyade', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. B. Mane', role: 'Member', dept: 'Poly. Engg.' },
+    ],
+    subGroups: [
+      {
+        name: 'Participants Presentations',
+        members: [
+          { name: 'Dr. S. B. Bhosale', role: 'Coordinator', dept: 'Degree Engg.' },
+          { name: 'Dr. D. D. Ronge', role: 'Member (Offline)', dept: 'Degree Engg.' },
+          { name: 'Mr. C. C. Jadhav', role: 'Member (Offline)', dept: 'Degree Engg.' },
+          { name: 'Mr. P. B. Bhaganagare', role: 'Member (Offline)', dept: 'Degree Engg.' },
+          { name: 'Ms. S. S. Gawade', role: 'Member (Offline)', dept: 'Degree Engg.' },
+          { name: 'Mr. S. W. Koli', role: 'Member (Offline)', dept: 'Degree Engg.' },
+          { name: 'Mrs. R. K. Suryawanshi', role: 'Member (Offline)', dept: 'Degree Engg.' },
+          { name: 'Mr. M. M. Landage', role: 'Member (Offline)', dept: 'Degree Engg.' },
+          { name: 'Mr. A. A. Ahmed', role: 'Member (Online)', dept: 'Degree Engg.' },
+          { name: 'Ms. P. S. Jamdar', role: 'Member (Online)', dept: 'Degree Engg.' },
+          { name: 'Ms. K. P. Kondubhairi', role: 'Member (Online)', dept: 'Degree Engg.' },
+          { name: 'Ms. A. S. Ashtul', role: 'Member (Online)', dept: 'Degree Engg.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 8,
+    name: 'Session Chair Coordination',
+    members: [
+      { name: 'Dr. S. S. Wangikar', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Dr. M. G. Deshmukh', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 9,
+    name: 'Welcome, Registration & Conference Kit',
+    members: [
+      { name: 'Ms. A. H. Kadam', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Ms. S. S. Sakhare', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. R. B. Maske', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Ms. P. A. Shelake', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'F.Y. B. Tech Faculty', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 10,
+    name: 'Conference Certificates',
+    members: [
+      { name: 'Dr. S. A. Lendave', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. A. B. Chonde', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'F.Y. B. Tech Faculty', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 11,
+    name: 'Video Shooting, Photography & Publicity',
+    members: [
+      { name: 'Dr. R. S. Naiknaware', role: 'Coordinator', dept: 'B. Pharm.' },
+      { name: 'Mr. S. S. Kamble', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. C. Halkude', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. A. B. Chandanshive', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. A. Dubal', role: 'Member', dept: 'B. Pharm.' },
+      { name: 'Mr. D. T. Gaikwad', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 12,
+    name: 'Sponsorship & Collaborations',
+    members: [
+      { name: 'Mr. Abhishek M. S.', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Dr. S. V. Mandave', role: 'Member', dept: 'D. Pharm.' },
+      { name: 'Dr. N. D. Misal', role: 'Member', dept: 'Poly. Engg.' },
+      { name: 'Mr. R. G. Zarkar', role: 'Member', dept: 'Degree Office' },
+      { name: 'Mr. S. R. Kadam', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. M. Bagal', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. S. Tagare', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 13,
+    name: 'Book of Abstract',
+    members: [
+      { name: 'Dr. I. Chitrasen Meitei', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. A. A. Shinde', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. D. D. Daphale', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Ms. P. V. Padavale', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 14,
+    name: 'Banner & Poster Preparation',
+    members: [
+      { name: 'Mr. A. R. Maske', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. A. A. Jadhav', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. D. T. Kashid', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 15,
+    name: 'Paper Editing/Reviewing',
+    members: [
+      { name: 'Dr. M. G. Maniyar', role: 'Coordinator', dept: 'B. Pharm.' },
+      { name: 'Dr. M. S. Mathpati', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. S. S. Wangikar', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. R. R. Gidde', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. Mrs. N. P. Kulkarni', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. H. B. Ronge', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. M. G. Deshmukh', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. Mrs. S. P. Pawar', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. Mrs. D. A. Tamboli', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 16,
+    name: 'Purchase & Finance',
+    members: [
+      { name: 'Dr. R. R. Gidde', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. S. S. Gaikwad', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. R. G. Zarkar', role: 'Member', dept: 'Degree Office' },
+      { name: 'Mr. S. S. Tagare', role: 'Member', dept: 'B. Pharm.' },
+    ],
+  },
+  {
+    id: 17,
+    name: 'Accommodation & Traveling (Participants)',
+    members: [
+      { name: 'Mr. A. B. Kokare', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. V. S. Gaikwad', role: 'Member', dept: 'B. Pharm.' },
+      { name: 'Mr. P. S. More', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. N. M. Morkane', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. R. S. Pore', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. A. A. Garad', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 18,
+    name: 'Travel Arrangement (Resource Persons & Guests)',
+    members: [
+      { name: 'Mr. A. K. Parake', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. A. H. Kalubarme', role: 'Member', dept: 'Poly. Engg.' },
+      { name: 'Mr. A. A. Pawar', role: 'Member', dept: 'Poly. Engg.' },
+      { name: 'Mr. V. S. Gaikwad', role: 'Member', dept: 'B. Pharm.' },
+      { name: 'Mr. Manjeet Kumar', role: 'Member', dept: 'Degree Engg.' },
+    ],
+    subGroups: [
+      {
+        name: 'Air & Rail Tickets',
+        members: [
+          { name: 'Mr. A. M. Dyade', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Dr. N. U. Kautkar', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Ms. S. S. Pati', role: 'Member', dept: 'Degree Engg.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 19,
+    name: 'Accommodation (Resource Persons & Guests) & Liaising',
+    members: [
+      { name: 'Dr. D. S. Chaudhari', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. S. B. Khadake', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. D. D. Dubal', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. A. Dubal', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. P. C. Waghmare', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. D. S. Jadhav', role: 'Member', dept: 'D. Pharm.' },
+    ],
+    subGroups: [
+      {
+        name: 'Liaising Team',
+        members: [
+          { name: 'Dr. Y. S. Padawale', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Dr. V. V. More', role: 'Member', dept: 'B. Pharm.' },
+          { name: 'Dr. H. B. Ronge', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Mr. D. D. Ronge', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Mr. D. T. Kashid', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Mr. A. K. Parkhe', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Ms. S. S. Jadhav', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Dr. Mrs. D. A. Tamboli', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Ms. P. A. Satarkar', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Dr. V. D. Jadhav', role: 'Member', dept: 'Degree Engg.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 20,
+    name: 'Food Arrangement',
+    members: [
+      { name: 'Mr. P. B. Asabe', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. A. A. Garad', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. D. Bhingare', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. D. Sarik', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. A. D. Sapkal', role: 'Member', dept: 'Poly. Engg.' },
+      { name: 'Mr. N. B. Jadhav', role: 'Member', dept: 'Poly. Engg.' },
+      { name: 'Mr. S. D. Kolekar', role: 'Member', dept: 'Poly. Engg.' },
+      { name: 'Mr. R. J. Salunkhe', role: 'Member', dept: 'Poly. Engg.' },
+      { name: 'Mr. D. V. Manjare', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. N. Jadhav', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. P. C. Waghmare', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. G. M. Patil', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. K. D. Palkar', role: 'Member', dept: 'Degree Engg.' },
+    ],
+    subGroups: [
+      {
+        name: 'Participant Food',
+        members: [
+          { name: 'Mr. G. S. Misal', role: 'Member', dept: 'Poly. Engg.' },
+          { name: 'Mr. N. A. Shinde', role: 'Member', dept: 'Poly. Engg.' },
+          { name: 'Mr. S. S. Kedar', role: 'Member', dept: 'Poly. Engg.' },
+          { name: 'Mr. S. A. Dubal', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Mr. P. C. Waghmare', role: 'Member', dept: 'Degree Engg.' },
+          { name: 'Mr. D. S. Jadhav', role: 'Member', dept: 'D. Pharm.' },
+          { name: 'Mr. Y. S. Pawar', role: 'Member', dept: 'B. Pharm.' },
+        ],
+      },
+    ],
+  },
+  {
+    id: 21,
+    name: 'Cultural Program',
+    members: [
+      { name: 'Dr. N. A. Talwalkar', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. P. P. Chavan', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Ms. M. D. Rajkumari', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. V. V. Patil', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Ms. A. U. Patil', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. B. Mane', role: 'Member', dept: 'Poly. Engg.' },
+      { name: 'Mr. B. S. Surwase', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. D. D. Dubal', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 22,
+    name: 'Vitthal Darshan Arrangement',
+    members: [
+      { name: 'Dr. D. S. Chaudhari', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. A. A. Garad', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 23,
+    name: 'Website Development',
+    members: [
+      { name: 'Mr. A. M. Dyade', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Mr. H. R. Gidde', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Ms. V. S. Yadav', role: 'Member', dept: 'Degree Engg.' },
+    ],
+  },
+  {
+    id: 24,
+    name: 'Management of Conference Portal (CMT)',
+    members: [
+      { name: 'Ms. M. S. Biswas', role: 'Coordinator', dept: 'Degree Engg.' },
+      { name: 'Dr. S. K. Pandey', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. R. R. Gidde', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Mr. S. S. Kawade', role: 'Member', dept: 'Degree Engg.' },
+      { name: 'Dr. A. R. Chikkale', role: 'Member', dept: 'B. Pharm.' },
+    ],
+  },
+];
+
+/* Organizing Committee — top-level hierarchy (from reference site) */
+export const ORGANIZING_COMMITTEE = {
+  chiefPatrons: [
+    { name: 'Dr. Anil Kakodkar', designation: 'Padma Vibhushan' },
+    { name: 'Dr. P. A. Mahanwar', designation: 'Vice Chancellor, PAHSU, Solapur' },
+    { name: 'Dr. B. P. Ronge', designation: 'Secretary, SVERI Pandharpur' },
+  ],
+  convener: [
+    {
+      name: 'Dr. B. P. Ronge',
+      designation: "Secretary, SVERI Pandharpur & Principal, SVERI's College of Engineering, Pandharpur",
+    },
+  ],
+  coConveners: [
+    { name: 'Dr. P. M. Pawar', designation: 'Dean S & T, PAHSU, Solapur' },
+    { name: 'Prof. V. B. Patil', designation: 'I/C Director, School of Life Sciences, PAHSUS' },
+  ],
+  coordinator: [
+    { name: 'Dr. R. R. Gidde', designation: 'Dean Administration' },
+  ],
+  coCoordinator: [
+    { name: 'Dr. D. D. Ronge', designation: 'IIC President' },
+  ],
+  principalsSisterInstitute: [
+    { name: 'Dr. N. D. Misal', designation: "Principal, SVERI's College of Engineering (Polytechnic) Pandharpur" },
+    { name: 'Dr. M. G. Maniyar', designation: "Principal, SVERI's College of Pharmacy, Pandharpur" },
+    { name: 'Mr. S. V. Mandave', designation: "Principal, SVERI's College of Pharmacy (Polytechnic) Pandharpur" },
+  ],
+  campusInCharge: [
+    { name: 'Dr. M. M. Pawar', designation: 'SVERI Pandharpur' },
+  ],
+  members: [
+    { name: 'Dr. Mrs. M. M. Pawar', designation: "Vice-Principal - SVERI's COE Pandharpur" },
+    { name: 'Dr. R. R. Gidde', designation: 'Dean Administration' },
+    { name: 'Dr. Mrs. P. A. Satarkar', designation: 'Dean Academics' },
+    { name: 'Dr. S. K. Pandey', designation: 'Dean Research & Development' },
+    { name: 'Dr. M. S. Mathpati', designation: 'Dean Students' },
+    { name: 'Dr. D. S. Chaudhary', designation: 'Dean Publicity & Protocol' },
+    { name: 'Mr. R. V. MAdhekar', designation: 'Dean Training & Alumni Affairs' },
+    { name: 'Dr. Abishek M. S', designation: 'Dean Placement & Corporate Affairs' },
+    { name: 'Mr. U. L. Anuse', designation: 'Dean Admission' },
+    { name: 'Dr. Mrs. D. A. Tamboli', designation: 'Dean Infrastructure' },
+    { name: 'Dr. A. H. Kadam', designation: 'HoD, General Science & Engg.' },
+    { name: 'Dr. Mrs. V. D. Jadhav', designation: 'HoD, CSE Engg.' },
+    { name: 'Dr. S. S. Wangikar', designation: 'HoD, Mechanical Engg.' },
+    { name: 'Dr. I. Chitrasen Meitei', designation: 'HoD, Electrical Engg.' },
+    { name: 'Dr. Mrs. N. P. Kulkarni', designation: 'HoD, E&TC Engg.' },
+    { name: 'Dr. Ms. S. P. Patil', designation: 'HoD, Civil Engg.' },
+    { name: 'Dr. K. P. Galani', designation: 'HoD, MBA' },
+    { name: 'Mr. M. Y. Shaikh', designation: 'HoD, MCA' },
+    { name: 'Dr. P. V. Ayyar', designation: '' },
+    { name: 'Dr. R. R. Shivsharan', designation: '' },
+    { name: 'Ms. R. S. Akkalkote', designation: '' },
+    { name: 'Mrs. S. Diwate', designation: '' },
+  ],
+};
