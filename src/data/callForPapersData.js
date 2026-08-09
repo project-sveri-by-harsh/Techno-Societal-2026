@@ -35,13 +35,13 @@ export const CONFERENCE_THEMES = [
 
 export const SUBMISSION_GUIDELINES = {
   guidelines: [
-    { title: 'Paper Submission Guidelines', icon: 'pdf', link: 'https://drive.google.com/uc?export=download&id=1w_ZNNELT5H3muUR3dUEj1BdEf0wfxEj4' }
+    { title: 'Paper Submission Guidelines', icon: 'pdf', link: '/documents/Paper_Submission_Guidelines.pdf' }
   ],
   paperTemplate: [
-    { title: 'Paper Template MS-Word File', icon: 'word', link: 'https://docs.google.com/document/d/1KB7ohLicJrHp3JpnXzqc_FfyzN_TXsUj/export?format=docx' }
+    { title: 'Paper Template MS-Word File', icon: 'word', link: '/documents/Paper_Template.docx' }
   ],
   posterTemplate: [
-    { title: 'PPT Template', icon: 'ppt', link: 'https://drive.google.com/uc?export=download&id=1IYPg6odJYC53g2gmVMUTbB24hlbbJ94E&timestamp=' + Date.now() },
-    { title: 'General guidelines for Poster', icon: 'pdf', link: 'https://techno.sveri.ac.in/documents/Poster%20Guidelines.pdf' }
+    { title: 'PPT Template', icon: 'ppt', link: '/documents/PPT_Template.pptx' },
+    { title: 'General guidelines for Poster', icon: 'pdf', link: '/documents/Poster_Guidelines.pdf' }
   ]
 };
