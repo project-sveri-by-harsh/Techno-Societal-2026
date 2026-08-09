@@ -26,7 +26,7 @@ export const IMPORTANT_DATES = [
   },
   {
     title: 'Conference Dates',
-    date: '19th & 20th December 2026',
+    date: '18th & 19th December 2026',
     status: 'Upcoming'
   }
 ];

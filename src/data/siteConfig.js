@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   conferenceFullName: '6th International Conference on Advanced Technologies for Societal Applications',
   edition: '6th',
   tagline: 'Technology for the Society',
-  dates: '19th and 20st December 2026',
+  dates: '18th and 19th December 2026',
   conferenceStartDate: '2026-12-20T09:00:00+05:30',
   venue: "SVERI's College of Engineering, Pandharpur",
 
