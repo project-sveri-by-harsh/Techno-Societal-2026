@@ -12,7 +12,7 @@ export const SITE_CONFIG = {
   submitPaperUrl: 'https://cmt3.research.microsoft.com/TechnoSocietal2026',
   brochureUrl: 'https://drive.google.com/file/d/1kL5ErezB1fvhupdhYDTqY6C5aDhQiptM/view?usp=sharing',
   feesDocumentUrl: 'PASTE_FEES_PDF_LINK_HERE',
-  telegramGroupUrl: 'PASTE_TELEGRAM_LINK_HERE',
+  whatsappChannelUrl: 'https://whatsapp.com/channel/0029VbDjbPiD8SE2YnI7RW2z',
 
   collegeName: "SVERI's College of Engineering, Pandharpur",
   collegeFullName: "SVERI's College of Engineering (An Autonomous Institute), Pandharpur",

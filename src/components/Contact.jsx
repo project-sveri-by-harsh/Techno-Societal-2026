@@ -30,19 +30,22 @@ export default function Contact() {
             {/* QR Code Column */}
             <div className="flex flex-col items-center border-y md:border-y-0 md:border-x border-white/10 py-8 md:py-0 px-4">
               <div className="bg-white p-2 rounded-xl shadow-[0_0_15px_rgba(255,255,255,0.5)] mb-4 inline-block">
+                {/* Note: This generates a standard QR code dynamically. 
+                    To use a custom image with a logo, replace the src with e.g. "/whatsapp-qr.png" 
+                    after saving your image to the public folder. */}
                 <img 
-                  src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${SITE_CONFIG.telegramGroupUrl}`}
-                  alt="Telegram Group QR Code" 
+                  src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${SITE_CONFIG.whatsappChannelUrl}`}
+                  alt="WhatsApp Channel QR Code" 
                   className="w-32 h-32 md:w-40 md:h-40"
                 />
               </div>
               <a 
-                href={SITE_CONFIG.telegramGroupUrl}
+                href={SITE_CONFIG.whatsappChannelUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[var(--color-cyber-magenta)] font-bold hover:text-white hover:underline transition-colors text-sm md:text-base drop-shadow-md"
               >
-                Click/Scan to join Telegram Group
+                Click/Scan to join WhatsApp Channel
               </a>
             </div>
 
