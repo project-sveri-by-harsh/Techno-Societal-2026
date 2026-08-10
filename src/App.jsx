@@ -15,10 +15,12 @@ import Footer from './components/Footer';
 import Editors from './components/Editors';
 import ScrollReveal from './components/ScrollReveal';
 import AnnouncementBanner from './components/AnnouncementBanner';
+import ScrollProgress from './components/ScrollProgress';
 
 export default function App() {
   return (
     <div className="min-h-screen">
+      <ScrollProgress />
       <AnnouncementBanner />
       <Navbar />
 
