@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { HiOutlineClipboardDocumentList } from 'react-icons/hi2';
 import { HiOutlineUserAdd } from 'react-icons/hi';
 import { SITE_CONFIG } from '../data/siteConfig';
-import ParticleBackground from './ParticleBackground';
+import CyberGrid from './CyberGrid';
 
 function useCountdown(targetDate) {
   const [timeLeft, setTimeLeft] = useState(calcTime(targetDate));
@@ -43,8 +43,8 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center text-slate-900 dark:text-white overflow-hidden bg-transparent -mt-16 md:-mt-[72px]"
     >
-      {/* Particle network background */}
-      <ParticleBackground />
+      {/* 3D Cyber Grid background */}
+      <CyberGrid />
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-28 text-center mt-10">
