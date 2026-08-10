@@ -7,7 +7,7 @@ import { SITE_CONFIG } from '../data/siteConfig';
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('#home');
+  // ponytail: removed IntersectionObserver scroll spy (YAGNI/over-engineering for a simple page)
 
   // Solid bg on scroll
   useEffect(() => {
@@ -16,20 +16,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Track active section via IntersectionObserver
-  useEffect(() => {
-    const sections = NAV_LINKS.map(l => document.querySelector(l.href)).filter(Boolean);
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) setActiveSection('#' + entry.target.id);
-        });
-      },
-      { rootMargin: '-40% 0px -55% 0px' }
-    );
-    sections.forEach(s => observer.observe(s));
-    return () => observer.disconnect();
-  }, []);
+
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
@@ -69,11 +56,7 @@ export default function Navbar() {
               <a
                 href={link.href}
                 onClick={e => handleNavClick(e, link.href)}
-                className={`px-3 py-2 rounded-md transition-colors whitespace-nowrap ${
-                  activeSection === link.href
-                    ? 'text-[var(--color-cyber-cyan)] font-semibold drop-shadow-[0_0_8px_rgba(0,240,255,0.5)]'
-                    : 'text-white/80 hover:text-white hover:bg-white/10'
-                }`}
+                className="px-3 py-2 rounded-md transition-colors whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
               >
                 {link.label}
               </a>
@@ -114,11 +97,7 @@ export default function Navbar() {
               <a
                 href={link.href}
                 onClick={e => handleNavClick(e, link.href)}
-                className={`block px-4 py-2.5 rounded-lg transition-colors ${
-                  activeSection === link.href
-                    ? 'text-[var(--color-cyber-cyan)] bg-white/10 font-semibold shadow-[inset_4px_0_0_var(--color-cyber-cyan)]'
-                    : 'text-white/80 hover:text-white hover:bg-white/5'
-                }`}
+                className="block px-4 py-2.5 rounded-lg transition-colors text-white/80 hover:text-white hover:bg-white/5"
               >
                 {link.label}
               </a>

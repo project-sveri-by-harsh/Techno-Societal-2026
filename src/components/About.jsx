@@ -39,15 +39,10 @@ export default function About() {
         {/* Content Box */}
         <div className="glass-panel rounded-2xl p-8 md:p-12 min-h-[250px] flex items-center shadow-2xl relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent z-0 pointer-events-none" />
-          {activeTab === 'background' ? (
-            <p className="relative z-10 text-white/90 font-medium italic text-sm md:text-base leading-relaxed text-justify drop-shadow-sm">
-              {ABOUT_CONFERENCE.background}
-            </p>
-          ) : (
-            <p className="relative z-10 text-white/90 font-medium italic text-sm md:text-base leading-relaxed text-justify drop-shadow-sm">
-              {ABOUT_CONFERENCE.purpose}
-            </p>
-          )}
+          {/* ponytail: removed ternary boilerplate for direct lookup */}
+          <p className="relative z-10 text-white/90 font-medium italic text-sm md:text-base leading-relaxed text-justify drop-shadow-sm">
+            {ABOUT_CONFERENCE[activeTab]}
+          </p>
         </div>
       </div>
     </section>

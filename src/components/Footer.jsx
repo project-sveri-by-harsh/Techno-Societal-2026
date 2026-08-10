@@ -66,7 +66,7 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <p className="text-xs mb-1">Updated and managed by Mr.Harshwardhan R Gidde & Ms.Vaishnavi V Yadav.</p>
+            <p className="text-xs mb-1">Updated and managed by Mr.Harshwardhan R Gidde & Ms.Vaishnavi S Yadav.</p>
             <p className="text-xs">Last updated: {typeof __BUILD_DATE__ !== 'undefined' ? __BUILD_DATE__ : SITE_CONFIG.lastUpdated}</p>
           </div>
         </div>

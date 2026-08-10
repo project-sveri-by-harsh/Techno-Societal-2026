@@ -66,56 +66,28 @@ export default function CallForPapers() {
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-                {/* Col 1 */}
-                <div>
-                  <h3 className="text-xl md:text-2xl font-light text-[var(--color-cyber-cyan)] mb-6 drop-shadow-md">
-                    Paper Submission Guidelines:
-                  </h3>
-                  <ul className="space-y-4">
-                    {SUBMISSION_GUIDELINES.guidelines.map((item, idx) => (
-                      <li key={idx}>
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" download className="flex items-center gap-3 text-white font-semibold italic text-sm hover:text-[var(--color-cyber-magenta)] hover:underline transition-colors">
-                          {getIcon(item.icon)}
-                          {item.title}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Col 2 */}
-                <div>
-                  <h3 className="text-xl md:text-2xl font-light text-[var(--color-cyber-cyan)] mb-6 drop-shadow-md">
-                    Paper Submission Template:
-                  </h3>
-                  <ul className="space-y-4">
-                    {SUBMISSION_GUIDELINES.paperTemplate.map((item, idx) => (
-                      <li key={idx}>
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" download className="flex items-center gap-3 text-white font-semibold italic text-sm hover:text-[var(--color-cyber-magenta)] hover:underline transition-colors">
-                          {getIcon(item.icon)}
-                          {item.title}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Col 3 */}
-                <div>
-                  <h3 className="text-xl md:text-2xl font-light text-[var(--color-cyber-cyan)] mb-6 drop-shadow-md">
-                    Poster Submission Template:
-                  </h3>
-                  <ul className="space-y-4">
-                    {SUBMISSION_GUIDELINES.posterTemplate.map((item, idx) => (
-                      <li key={idx}>
-                        <a href={item.link} target="_blank" rel="noopener noreferrer" download className="flex items-center gap-3 text-white font-semibold italic text-sm hover:text-[var(--color-cyber-magenta)] hover:underline transition-colors">
-                          {getIcon(item.icon)}
-                          {item.title}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {/* ponytail: eliminated 3x boilerplate columns by mapping a simple array */}
+                {[
+                  { title: 'Paper Submission Guidelines:', data: SUBMISSION_GUIDELINES.guidelines },
+                  { title: 'Paper Submission Template:', data: SUBMISSION_GUIDELINES.paperTemplate },
+                  { title: 'Poster Submission Template:', data: SUBMISSION_GUIDELINES.posterTemplate }
+                ].map((col, cIdx) => (
+                  <div key={cIdx}>
+                    <h3 className="text-xl md:text-2xl font-light text-[var(--color-cyber-cyan)] mb-6 drop-shadow-md">
+                      {col.title}
+                    </h3>
+                    <ul className="space-y-4">
+                      {col.data.map((item, idx) => (
+                        <li key={idx}>
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" download className="flex items-center gap-3 text-white font-semibold italic text-sm hover:text-[var(--color-cyber-magenta)] hover:underline transition-colors">
+                            {getIcon(item.icon)}
+                            {item.title}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             )}
           </div>
