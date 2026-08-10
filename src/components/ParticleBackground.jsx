@@ -1,16 +1,8 @@
-import { useEffect, useState, useMemo } from 'react';
-import Particles, { initParticlesEngine } from '@tsparticles/react';
+import { useMemo } from 'react';
+import { Particles, ParticlesProvider } from '@tsparticles/react';
 import { loadSlim } from '@tsparticles/slim';
 
-export default function ParticleBackground() {
-  const [ready, setReady] = useState(false);
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => setReady(true));
-  }, []);
-
+function ParticleCanvas() {
   const options = useMemo(() => ({
     fullScreen: false,
     background: { color: { value: 'transparent' } },
@@ -46,13 +38,19 @@ export default function ParticleBackground() {
     detectRetina: true,
   }), []);
 
-  if (!ready) return null;
-
   return (
     <Particles
       id="hero-particles"
       className="absolute inset-0 z-0"
       options={options}
     />
+  );
+}
+
+export default function ParticleBackground() {
+  return (
+    <ParticlesProvider init={async (engine) => { await loadSlim(engine); }}>
+      <ParticleCanvas />
+    </ParticlesProvider>
   );
 }
