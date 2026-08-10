@@ -31,7 +31,7 @@ export default function Navbar() {
         scrolled || mobileOpen ? 'glass-panel !border-t-0 !border-x-0 !rounded-none !bg-[var(--color-cyber-dark)]/80' : 'navbar-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-8 h-16 md:h-18">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 h-16 md:h-18">
         {/* Logo + Brand */}
         <a
           href="#home"
@@ -43,20 +43,20 @@ export default function Navbar() {
             alt="Techno-Societal 2026"
             className="h-12 md:h-14 w-auto rounded-lg border-2 border-[var(--color-cyber-cyan)]/50 bg-white/90 p-0.5 shadow-[0_0_10px_rgba(0,240,255,0.3)]"
           />
-          <span className="font-[family-name:var(--font-display)] font-bold text-white text-lg md:text-xl tracking-tight hidden sm:flex flex-col items-center leading-none">
+          <span className="font-[family-name:var(--font-display)] font-bold text-white text-base md:text-lg tracking-tight hidden sm:flex flex-col items-center leading-none">
             <span>TECHNO-SOCIETAL</span>
-            <span className="text-[var(--color-cyber-cyan)] drop-shadow-md text-sm md:text-base mt-1">2026</span>
+            <span className="text-[var(--color-cyber-cyan)] drop-shadow-md text-xs md:text-sm mt-1">2026</span>
           </span>
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden lg:flex items-center gap-1 text-sm">
+        <ul className="hidden lg:flex items-center gap-0 text-xs xl:text-sm">
           {NAV_LINKS.map(link => (
             <li key={link.href}>
               <a
                 href={link.href}
                 onClick={e => handleNavClick(e, link.href)}
-                className="px-3 py-2 rounded-md transition-colors whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
+                className="px-2 xl:px-3 py-2 rounded-md transition-colors whitespace-nowrap text-white/80 hover:text-white hover:bg-white/10"
               >
                 {link.label}
               </a>
@@ -67,7 +67,7 @@ export default function Navbar() {
               href={SITE_CONFIG.brochureUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 bg-[var(--color-cyber-magenta)] hover:bg-[var(--color-cyber-purple)] text-white font-semibold rounded-lg text-sm transition-all shadow-[0_0_15px_rgba(255,0,234,0.4)] hover:shadow-[0_0_20px_rgba(112,0,255,0.6)] hover:-translate-y-0.5"
+              className="ml-1 inline-flex items-center gap-1.5 px-3 py-1.5 bg-[var(--color-cyber-magenta)] hover:bg-[var(--color-cyber-purple)] text-white font-semibold rounded-lg text-xs xl:text-sm transition-all shadow-[0_0_15px_rgba(255,0,234,0.4)] hover:shadow-[0_0_20px_rgba(112,0,255,0.6)] hover:-translate-y-0.5"
             >
               <HiArrowDownTray className="w-4 h-4" />
               Brochure

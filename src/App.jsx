@@ -6,7 +6,7 @@ import ImportantDates from './components/ImportantDates';
 import Registration from './components/Registration';
 import Schedule from './components/Schedule';
 import Speakers from './components/Speakers';
-import Downloads from './components/Downloads';
+// import Downloads from './components/Downloads';
 import Gallery from './components/Gallery';
 import Venue from './components/Venue';
 import Contact from './components/Contact';
@@ -43,9 +43,9 @@ export default function App() {
 
         <Speakers />
 
-        <ScrollReveal>
+        {/* <ScrollReveal>
           <Downloads />
-        </ScrollReveal>
+        </ScrollReveal> */}
 
         <ScrollReveal>
           <Committee />
