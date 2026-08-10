@@ -5,7 +5,7 @@ export default function Editors() {
   return (
     <section id="editors" className="relative py-20 px-4 md:px-8 bg-transparent">
       <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-white mb-3 uppercase tracking-wider drop-shadow-md">
+        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-3 uppercase tracking-wider drop-shadow-md">
           Editors
         </h2>
         <div className="w-12 h-1 bg-[var(--color-cyber-cyan)] mx-auto mb-16 shadow-[0_0_10px_var(--color-cyber-cyan)]" />
@@ -16,12 +16,12 @@ export default function Editors() {
               key={index} 
               className="glass-panel p-6 rounded-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(255,0,234,0.15)] hover:border-[var(--color-cyber-magenta)] group"
             >
-              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[var(--color-cyber-cyan)] transition-colors drop-shadow-sm">
+              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-[var(--color-cyber-cyan)] transition-colors drop-shadow-sm">
                 {editor.name}
               </h3>
               <a 
                 href={`mailto:${editor.email}`} 
-                className="inline-flex items-center gap-2 text-white/70 hover:text-[var(--color-cyber-magenta)] text-sm transition-colors"
+                className="inline-flex items-center gap-2 text-slate-600 dark:text-white/70 hover:text-blue-600 dark:hover:text-[var(--color-cyber-magenta)] text-sm transition-colors"
               >
                 <HiOutlineMail className="w-4 h-4" />
                 {editor.email}

@@ -21,7 +21,7 @@ export default function Schedule() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-white mb-3 uppercase tracking-wider drop-shadow-md"
+          className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-3 uppercase tracking-wider drop-shadow-md"
         >
           Event Schedule
         </motion.h2>
@@ -36,7 +36,7 @@ export default function Schedule() {
               className={`relative px-8 py-3 rounded-xl font-bold text-sm md:text-base transition-all duration-300 ${
                 activeDay === key
                   ? 'bg-gradient-to-r from-[var(--color-cyber-purple)] to-[var(--color-cyber-magenta)] text-white shadow-[0_0_20px_rgba(112,0,255,0.5)]'
-                  : 'glass-panel text-white/70 hover:text-white hover:bg-white/10'
+                  : 'glass-panel text-slate-700 dark:text-white/70 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10'
               }`}
             >
               <span className="block text-base">{day.label}</span>
@@ -73,28 +73,28 @@ export default function Schedule() {
                   <div className="flex flex-col sm:flex-row sm:items-center gap-3">
                     {/* Time */}
                     <div className="flex items-center gap-2 sm:w-40 shrink-0">
-                      <HiOutlineClock className="w-4 h-4 text-white/50" />
-                      <span className="text-sm font-bold text-white/80 tabular-nums">{event.time}</span>
+                      <HiOutlineClock className="w-4 h-4 text-slate-500 dark:text-white/50" />
+                      <span className="text-sm font-bold text-slate-700 dark:text-white/80 tabular-nums">{event.time}</span>
                     </div>
 
                     {/* Details */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
                         <Icon className="w-4 h-4 shrink-0" style={{ color: style.color }} />
-                        <h3 className="text-base font-bold text-white group-hover:text-[var(--color-cyber-cyan)] transition-colors truncate">
+                        <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-[var(--color-cyber-cyan)] transition-colors truncate">
                           {event.title}
                         </h3>
                       </div>
                       {event.description && (
-                        <p className="text-xs text-white/50 ml-6">{event.description}</p>
+                        <p className="text-xs text-slate-500 dark:text-white/50 ml-6">{event.description}</p>
                       )}
                       {event.speaker && event.speaker !== 'TBA' && (
-                        <p className="text-xs text-[var(--color-cyber-magenta)] ml-6 font-medium">Speaker: {event.speaker}</p>
+                        <p className="text-xs text-purple-700 dark:text-[var(--color-cyber-magenta)] ml-6 font-medium">Speaker: {event.speaker}</p>
                       )}
                     </div>
 
                     {/* Venue */}
-                    <div className="flex items-center gap-1 text-xs text-white/40 sm:w-32 shrink-0">
+                    <div className="flex items-center gap-1 text-xs text-slate-500 dark:text-white/40 sm:w-32 shrink-0">
                       <HiOutlineMapPin className="w-3 h-3" />
                       <span>{event.venue}</span>
                     </div>
@@ -105,7 +105,7 @@ export default function Schedule() {
           </motion.div>
         </AnimatePresence>
 
-        <p className="text-center text-white/30 text-xs mt-8 italic">
+        <p className="text-center text-slate-500 dark:text-white/30 text-xs mt-8 italic">
           * Schedule is tentative and subject to change
         </p>
       </div>

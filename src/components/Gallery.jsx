@@ -4,10 +4,10 @@ export default function Gallery() {
   return (
     <section id="gallery" className="relative py-20 overflow-hidden bg-transparent">
       <div className="max-w-7xl mx-auto px-4 md:px-8 relative z-10">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-white mb-3 uppercase tracking-wider drop-shadow-md">
+        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-3 uppercase tracking-wider drop-shadow-md">
           Gallery
         </h2>
-        <p className="text-center text-white/70 mb-6 font-medium drop-shadow-sm">
+        <p className="text-center text-slate-600 dark:text-white/70 mb-6 font-medium drop-shadow-sm">
           Check our gallery from the recent Conferences
         </p>
         <div className="w-12 h-1 bg-[var(--color-cyber-cyan)] mx-auto mb-16 shadow-[0_0_10px_var(--color-cyber-cyan)]" />

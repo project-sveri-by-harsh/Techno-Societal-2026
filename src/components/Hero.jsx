@@ -27,10 +27,10 @@ function calcTime(target) {
 function CountdownUnit({ value, label }) {
   return (
     <div className="flex flex-col items-center">
-      <span className="text-3xl md:text-5xl font-bold font-[family-name:var(--font-display)] tabular-nums text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
+      <span className="text-3xl md:text-5xl font-bold font-[family-name:var(--font-display)] tabular-nums text-slate-900 dark:text-white dark:drop-shadow-[0_0_8px_rgba(255,255,255,0.8)] drop-shadow-md">
         {String(value).padStart(2, '0')}
       </span>
-      <span className="text-xs md:text-sm uppercase tracking-wider mt-1 text-[var(--color-cyber-cyan)] font-bold">{label}</span>
+      <span className="text-xs md:text-sm uppercase tracking-wider mt-1 text-blue-700 dark:text-[var(--color-cyber-cyan)] font-bold">{label}</span>
     </div>
   );
 }
@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center text-white overflow-hidden bg-transparent"
+      className="relative min-h-screen flex items-center justify-center text-slate-900 dark:text-white overflow-hidden bg-transparent"
     >
       {/* Particle network background */}
       <ParticleBackground />
@@ -53,7 +53,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 drop-shadow-lg text-white flex flex-col items-center gap-2"
+          className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 drop-shadow-lg text-slate-900 dark:text-white flex flex-col items-center gap-2"
         >
           <span>TECHNO SOCIETAL</span>
           <span className="relative inline-block">
@@ -66,7 +66,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.15 }}
-          className="text-lg sm:text-xl md:text-2xl font-medium mb-4 drop-shadow-md max-w-3xl mx-auto text-white/90"
+          className="text-lg sm:text-xl md:text-2xl font-medium mb-4 drop-shadow-md max-w-3xl mx-auto text-slate-800 dark:text-white/90"
         >
           {SITE_CONFIG.conferenceFullName}
         </motion.p>
@@ -75,7 +75,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.25 }}
-          className="text-xl md:text-2xl italic mb-10 drop-shadow-md text-[var(--color-cyber-magenta)] font-bold"
+          className="text-xl md:text-2xl italic mb-10 drop-shadow-md text-purple-700 dark:text-[var(--color-cyber-magenta)] font-bold"
         >
           <span className="font-semibold">{SITE_CONFIG.dates}</span>
         </motion.p>
@@ -88,11 +88,11 @@ export default function Hero() {
           className="inline-flex gap-4 sm:gap-6 md:gap-8 glass-panel rounded-2xl px-6 py-5 mb-10"
         >
           <CountdownUnit value={countdown.days} label="Days" />
-          <span className="text-3xl md:text-5xl font-light text-[var(--color-cyber-cyan)] self-start drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">:</span>
+          <span className="text-3xl md:text-5xl font-light text-blue-700 dark:text-[var(--color-cyber-cyan)] self-start drop-shadow-sm dark:drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">:</span>
           <CountdownUnit value={countdown.hours} label="Hours" />
-          <span className="text-3xl md:text-5xl font-light text-[var(--color-cyber-cyan)] self-start drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">:</span>
+          <span className="text-3xl md:text-5xl font-light text-blue-700 dark:text-[var(--color-cyber-cyan)] self-start drop-shadow-sm dark:drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">:</span>
           <CountdownUnit value={countdown.minutes} label="Min" />
-          <span className="text-3xl md:text-5xl font-light text-[var(--color-cyber-cyan)] self-start drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">:</span>
+          <span className="text-3xl md:text-5xl font-light text-blue-700 dark:text-[var(--color-cyber-cyan)] self-start drop-shadow-sm dark:drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">:</span>
           <CountdownUnit value={countdown.seconds} label="Sec" />
         </motion.div>
 
@@ -116,7 +116,7 @@ export default function Hero() {
             href={SITE_CONFIG.submitPaperUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-3.5 glass-panel text-white font-bold rounded-xl text-lg transition-all hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] hover:border-[var(--color-cyber-cyan)]"
+            className="inline-flex items-center gap-2 px-8 py-3.5 glass-panel text-slate-900 dark:text-white font-bold rounded-xl text-lg transition-all hover:-translate-y-1 dark:hover:shadow-[0_0_15px_rgba(0,240,255,0.5)] hover:border-blue-600 dark:hover:border-[var(--color-cyber-cyan)]"
           >
             <HiOutlineClipboardDocumentList className="w-5 h-5" />
             Submit Paper
@@ -130,14 +130,14 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.55 }}
           className="space-y-3 mb-6"
         >
-          <p className="text-base md:text-lg text-[var(--color-cyber-cyan)] font-semibold drop-shadow-md">
+          <p className="text-base md:text-lg text-blue-700 dark:text-[var(--color-cyber-cyan)] font-semibold drop-shadow-md">
             Organized by,
           </p>
-          <p className="text-lg md:text-xl font-bold text-white drop-shadow-md">
+          <p className="text-lg md:text-xl font-bold text-slate-900 dark:text-white drop-shadow-md">
             {SITE_CONFIG.collegeName}
           </p>
-          <p className="text-base text-white/80">(An Autonomous Institute)</p>
-          <p className="text-xs md:text-sm text-white/60 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-slate-700 dark:text-white/80">(An Autonomous Institute)</p>
+          <p className="text-xs md:text-sm text-slate-600 dark:text-white/60 max-w-3xl mx-auto leading-relaxed">
             Approved by A.I.C.T.E., New Delhi and affiliated to {SITE_CONFIG.university}.
             <br />
             NIRF-2023 ranked in Innovation Category (151-300), NBA Accredited all Eligible UG Programmes,
@@ -154,13 +154,13 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="space-y-1 mb-6 mt-4"
         >
-          <p className="text-sm md:text-base text-white font-bold drop-shadow-md">
+          <p className="text-sm md:text-base text-slate-900 dark:text-white font-bold drop-shadow-md">
             In collaboration with
           </p>
-          <p className="text-lg md:text-xl font-bold text-yellow-400 drop-shadow-md">
+          <p className="text-lg md:text-xl font-bold text-yellow-600 dark:text-yellow-400 drop-shadow-md">
             {SITE_CONFIG.collaboration.institute}
           </p>
-          <p className="text-[var(--color-cyber-cyan)] text-sm">{SITE_CONFIG.collaboration.note}</p>
+          <p className="text-blue-700 dark:text-[var(--color-cyber-cyan)] text-sm">{SITE_CONFIG.collaboration.note}</p>
         </motion.div>
 
         {/* Accreditation logo row */}
@@ -177,7 +177,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--color-cyber-dark)] to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-50 dark:from-[var(--color-cyber-dark)] to-transparent pointer-events-none" />
     </section>
   );
 }

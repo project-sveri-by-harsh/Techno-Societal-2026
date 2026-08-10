@@ -4,14 +4,14 @@ import { ORGANIZING_COMMITTEE } from '../data/committeeData';
 function RoleGroup({ title, people, accent = false }) {
   return (
     <div className="mb-8">
-      <h3 className={`text-sm uppercase tracking-widest font-bold mb-4 drop-shadow-sm ${accent ? 'text-[var(--color-cyber-magenta)]' : 'text-[var(--color-cyber-cyan)]'}`}>
+      <h3 className={`text-sm uppercase tracking-widest font-bold mb-4 drop-shadow-sm ${accent ? 'text-purple-700 dark:text-[var(--color-cyber-magenta)]' : 'text-blue-700 dark:text-[var(--color-cyber-cyan)]'}`}>
         {title}
       </h3>
       <ul className="space-y-3">
         {people.map((p, i) => (
           <li key={i}>
-            <p className="text-white font-semibold text-base drop-shadow-md">{p.name}</p>
-            {p.designation && <p className="text-white/60 text-sm">{p.designation}</p>}
+            <p className="text-slate-900 dark:text-white font-semibold text-base drop-shadow-md">{p.name}</p>
+            {p.designation && <p className="text-slate-600 dark:text-white/60 text-sm">{p.designation}</p>}
           </li>
         ))}
       </ul>
@@ -25,7 +25,7 @@ export default function Committee() {
     ORGANIZING_COMMITTEE;
 
   return (
-    <section id="committee" className="relative text-white py-20 bg-transparent">
+    <section id="committee" className="relative text-slate-900 dark:text-white py-20 bg-transparent">
       
       <div className="max-w-6xl mx-auto px-4 md:px-8 relative z-10">
         {/* Organizing Committee */}

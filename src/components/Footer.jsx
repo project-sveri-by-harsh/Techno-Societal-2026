@@ -17,13 +17,13 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-navy-950 text-white/70">
+    <footer className="bg-slate-100 dark:bg-navy-950 text-slate-700 dark:text-white/70">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Brand block */}
           <div>
-            <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-white mb-3">
-              TECHNO-SOCIETAL <span className="text-gold-400">2026</span>
+            <h3 className="font-[family-name:var(--font-display)] text-xl font-bold text-slate-900 dark:text-white mb-3">
+              TECHNO-SOCIETAL <span className="text-blue-700 dark:text-gold-400">2026</span>
             </h3>
             <p className="text-sm leading-relaxed mb-4">
               {SITE_CONFIG.conferenceFullName}
@@ -33,14 +33,14 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-slate-900 dark:text-white font-semibold mb-4 text-sm uppercase tracking-wider">Quick Links</h4>
             <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
               {NAV_LINKS.map(link => (
                 <li key={link.href}>
                   <a
                     href={link.href}
                     onClick={e => handleClick(e, link.href)}
-                    className="hover:text-gold-400 transition-colors"
+                    className="hover:text-blue-700 dark:hover:text-gold-400 transition-colors"
                   >
                     {link.label}
                   </a>
@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Social + meta */}
           <div>
-            <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Connect</h4>
+            <h4 className="text-slate-900 dark:text-white font-semibold mb-4 text-sm uppercase tracking-wider">Connect</h4>
             <div className="flex gap-3 mb-6">
               {socialIcons.map(({ Icon, url, label }) => (
                 <a
@@ -60,7 +60,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold-500 hover:text-navy-950 transition-colors"
+                  className="w-9 h-9 rounded-full bg-slate-200 dark:bg-white/10 flex items-center justify-center hover:bg-blue-600 dark:hover:bg-gold-500 hover:text-white dark:hover:text-navy-950 text-slate-600 dark:text-white transition-colors"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
+        <div className="border-t border-slate-300 dark:border-white/10 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
           <p>© 2026 {SITE_CONFIG.collegeName}. All rights reserved.</p>
           <p>{SITE_CONFIG.conferenceName}</p>
         </div>

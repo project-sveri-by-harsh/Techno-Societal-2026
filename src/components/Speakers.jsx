@@ -29,25 +29,25 @@ function SpeakerCard({ speaker, index }) {
         ) : (
           <div className="flex flex-col items-center gap-3">
             <div className="w-20 h-20 rounded-full bg-white/10 border-2 border-white/20 flex items-center justify-center">
-              <HiOutlineGlobeAlt className="w-10 h-10 text-white/40" />
+              <HiOutlineGlobeAlt className="w-10 h-10 text-slate-400 dark:text-white/40" />
             </div>
-            <span className="text-xs text-white/40 font-medium uppercase tracking-wider">Coming Soon</span>
+            <span className="text-xs text-slate-500 dark:text-white/40 font-medium uppercase tracking-wider">Coming Soon</span>
           </div>
         )}
         {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-cyber-dark)] to-transparent opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-100 dark:from-[var(--color-cyber-dark)] to-transparent opacity-60" />
       </div>
 
       {/* Info */}
       <div className="p-5 relative">
-        <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full bg-[var(--color-cyber-cyan)]/15 text-[var(--color-cyber-cyan)] border border-[var(--color-cyber-cyan)]/20 mb-3">
+        <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-wider rounded-full bg-blue-100 dark:bg-[var(--color-cyber-cyan)]/15 text-blue-700 dark:text-[var(--color-cyber-cyan)] border border-blue-200 dark:border-[var(--color-cyber-cyan)]/20 mb-3">
           {speaker.title}
         </span>
-        <h3 className="text-lg font-bold text-white mb-1 group-hover:text-[var(--color-cyber-cyan)] transition-colors">
+        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-[var(--color-cyber-cyan)] transition-colors">
           {speaker.name}
         </h3>
-        <p className="text-sm text-white/50 mb-2">{speaker.affiliation}</p>
-        <p className="text-xs text-[var(--color-cyber-magenta)] font-medium italic">"{speaker.topic}"</p>
+        <p className="text-sm text-slate-600 dark:text-white/50 mb-2">{speaker.affiliation}</p>
+        <p className="text-xs text-purple-700 dark:text-[var(--color-cyber-magenta)] font-medium italic">"{speaker.topic}"</p>
       </div>
     </motion.div>
   );
@@ -61,7 +61,7 @@ export default function Speakers() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-white mb-3 uppercase tracking-wider drop-shadow-md"
+          className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-3 uppercase tracking-wider drop-shadow-md"
         >
           Keynote Speakers
         </motion.h2>
@@ -70,7 +70,7 @@ export default function Speakers() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-white/50 mb-14 text-sm"
+          className="text-center text-slate-600 dark:text-white/50 mb-14 text-sm"
         >
           Distinguished speakers from academia and industry
         </motion.p>

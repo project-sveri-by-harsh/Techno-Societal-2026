@@ -14,10 +14,12 @@ import Committee from './components/Committee';
 import Footer from './components/Footer';
 import Editors from './components/Editors';
 import ScrollReveal from './components/ScrollReveal';
+import AnnouncementBanner from './components/AnnouncementBanner';
 
 export default function App() {
   return (
-    <>
+    <div className="min-h-screen">
+      <AnnouncementBanner />
       <Navbar />
 
       <main>
@@ -69,6 +71,6 @@ export default function App() {
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }

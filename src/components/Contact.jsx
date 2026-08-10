@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-20 px-4 md:px-8 bg-transparent">
       <div className="max-w-5xl mx-auto relative z-10">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-white mb-3 uppercase tracking-wider drop-shadow-md">
+        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-3 uppercase tracking-wider drop-shadow-md">
           Contact Us
         </h2>
         <div className="w-12 h-1 bg-[var(--color-cyber-cyan)] mx-auto mb-16 shadow-[0_0_10px_var(--color-cyber-cyan)]" />
@@ -16,10 +16,10 @@ export default function Contact() {
             
             {/* Address Column */}
             <div className="flex flex-col items-center">
-              <h3 className="text-lg font-bold text-[var(--color-cyber-cyan)] uppercase tracking-widest mb-4 drop-shadow-md">
+              <h3 className="text-lg font-bold text-blue-700 dark:text-[var(--color-cyber-cyan)] uppercase tracking-widest mb-4 drop-shadow-md">
                 Address
               </h3>
-              <div className="text-white/90 font-medium text-sm md:text-base leading-relaxed">
+              <div className="text-slate-800 dark:text-white/90 font-medium text-sm md:text-base leading-relaxed">
                 <p>SVERI's College of Engineering, Pandharpur</p>
                 <p>Gopalpur-Ranjani Road, P. B. No.54,</p>
                 <p>Gopalpur</p>
@@ -28,7 +28,7 @@ export default function Contact() {
             </div>
 
             {/* QR Code Column */}
-            <div className="flex flex-col items-center border-y md:border-y-0 md:border-x border-white/10 py-8 md:py-0 px-4">
+            <div className="flex flex-col items-center border-y md:border-y-0 md:border-x border-slate-300 dark:border-white/10 py-8 md:py-0 px-4">
               <div className="bg-white p-2 rounded-xl shadow-[0_0_15px_rgba(255,255,255,0.5)] mb-4 inline-block">
                 {/* Note: This generates a standard QR code dynamically. 
                     To use a custom image with a logo, replace the src with e.g. "/whatsapp-qr.png" 
@@ -43,7 +43,7 @@ export default function Contact() {
                 href={SITE_CONFIG.whatsappChannelUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[var(--color-cyber-magenta)] font-bold hover:text-white hover:underline transition-colors text-sm md:text-base drop-shadow-md"
+                className="text-[var(--color-cyber-magenta)] font-bold hover:text-blue-600 dark:hover:text-white hover:underline transition-colors text-sm md:text-base drop-shadow-md"
               >
                 Click/Scan to join WhatsApp Channel
               </a>
@@ -51,19 +51,19 @@ export default function Contact() {
 
             {/* Email Column */}
             <div className="flex flex-col items-center">
-              <h3 className="text-lg font-bold text-[var(--color-cyber-cyan)] uppercase tracking-widest mb-4 drop-shadow-md">
+              <h3 className="text-lg font-bold text-blue-700 dark:text-[var(--color-cyber-cyan)] uppercase tracking-widest mb-4 drop-shadow-md">
                 Email
               </h3>
               <div className="flex flex-col gap-2">
                 <a 
                   href="mailto:rrgidde@coe.sveri.ac.in" 
-                  className="text-[var(--color-cyber-purple)] font-bold hover:text-white hover:underline transition-colors text-sm md:text-base drop-shadow-md"
+                  className="text-[var(--color-cyber-purple)] font-bold hover:text-blue-600 dark:hover:text-white hover:underline transition-colors text-sm md:text-base drop-shadow-md"
                 >
                   rrgidde@coe.sveri.ac.in
                 </a>
                 <a 
                   href="mailto:ddronge@coe.sveri.ac.in" 
-                  className="text-[var(--color-cyber-purple)] font-bold hover:text-white hover:underline transition-colors text-sm md:text-base drop-shadow-md"
+                  className="text-[var(--color-cyber-purple)] font-bold hover:text-blue-600 dark:hover:text-white hover:underline transition-colors text-sm md:text-base drop-shadow-md"
                 >
                   ddronge@coe.sveri.ac.in
                 </a>

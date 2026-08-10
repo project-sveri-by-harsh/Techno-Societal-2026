@@ -17,7 +17,7 @@ export default function CallForPapers() {
   return (
     <section id="call-for-papers" className="relative py-20 px-4 md:px-8 bg-transparent">
       <div className="max-w-5xl mx-auto relative z-10">
-        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-white mb-3 uppercase tracking-wider drop-shadow-md">
+        <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-3 uppercase tracking-wider drop-shadow-md">
           Call for Paper
         </h2>
         <div className="w-12 h-1 bg-[var(--color-cyber-cyan)] mx-auto mb-10 shadow-[0_0_10px_var(--color-cyber-cyan)]" />
@@ -29,7 +29,7 @@ export default function CallForPapers() {
             className={`px-8 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 ${
               activeTab === 'themes' 
                 ? 'bg-[var(--color-cyber-purple)] text-white shadow-[0_0_15px_var(--color-cyber-purple)]' 
-                : 'glass-panel text-white hover:bg-white/10 hover:shadow-[0_0_10px_var(--color-cyber-cyan)] border-white/20'
+                : 'glass-panel text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-white/10 hover:shadow-[0_0_10px_var(--color-cyber-cyan)] border-slate-300 dark:border-white/20'
             }`}
           >
             Conference Themes
@@ -39,7 +39,7 @@ export default function CallForPapers() {
             className={`px-8 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 ${
               activeTab === 'guidelines' 
                 ? 'bg-[var(--color-cyber-magenta)] text-white shadow-[0_0_15px_var(--color-cyber-magenta)]' 
-                : 'glass-panel text-white hover:bg-white/10 hover:shadow-[0_0_10px_var(--color-cyber-cyan)] border-white/20'
+                : 'glass-panel text-slate-700 dark:text-white hover:bg-slate-200 dark:hover:bg-white/10 hover:shadow-[0_0_10px_var(--color-cyber-cyan)] border-slate-300 dark:border-white/20'
             }`}
           >
             Paper Submission Guidelines
@@ -55,10 +55,10 @@ export default function CallForPapers() {
               <div className="divide-y divide-white/10">
                 {CONFERENCE_THEMES.map((theme, index) => (
                   <div key={index} className="py-4 hover:bg-white/5 transition-colors px-4 rounded-lg -mx-4 group">
-                    <p className="text-white font-bold text-sm md:text-base leading-relaxed group-hover:text-[var(--color-cyber-cyan)] transition-colors">
+                    <p className="text-slate-900 dark:text-white font-bold text-sm md:text-base leading-relaxed group-hover:text-blue-600 dark:group-hover:text-[var(--color-cyber-cyan)] transition-colors">
                       {theme.title}
                     </p>
-                    <p className="text-white/70 text-xs md:text-sm mt-1 leading-relaxed">
+                    <p className="text-slate-600 dark:text-white/70 text-xs md:text-sm mt-1 leading-relaxed">
                       {theme.topics}
                     </p>
                   </div>
@@ -73,13 +73,13 @@ export default function CallForPapers() {
                   { title: 'Poster Submission Template:', data: SUBMISSION_GUIDELINES.posterTemplate }
                 ].map((col, cIdx) => (
                   <div key={cIdx}>
-                    <h3 className="text-xl md:text-2xl font-light text-[var(--color-cyber-cyan)] mb-6 drop-shadow-md">
+                    <h3 className="text-xl md:text-2xl font-light text-blue-700 dark:text-[var(--color-cyber-cyan)] mb-6 drop-shadow-md">
                       {col.title}
                     </h3>
                     <ul className="space-y-4">
                       {col.data.map((item, idx) => (
                         <li key={idx}>
-                          <a href={item.link} target="_blank" rel="noopener noreferrer" download className="flex items-center gap-3 text-white font-semibold italic text-sm hover:text-[var(--color-cyber-magenta)] hover:underline transition-colors">
+                          <a href={item.link} target="_blank" rel="noopener noreferrer" download className="flex items-center gap-3 text-slate-800 dark:text-white font-semibold italic text-sm hover:text-blue-600 dark:hover:text-[var(--color-cyber-magenta)] hover:underline transition-colors">
                             {getIcon(item.icon)}
                             {item.title}
                           </a>
