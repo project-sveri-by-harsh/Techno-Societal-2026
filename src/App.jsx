@@ -4,12 +4,16 @@ import About from './components/About';
 import CallForPapers from './components/CallForPapers';
 import ImportantDates from './components/ImportantDates';
 import Registration from './components/Registration';
+import Schedule from './components/Schedule';
+import Speakers from './components/Speakers';
+import Downloads from './components/Downloads';
 import Gallery from './components/Gallery';
 import Venue from './components/Venue';
 import Contact from './components/Contact';
 import Committee from './components/Committee';
 import Footer from './components/Footer';
 import Editors from './components/Editors';
+import ScrollReveal from './components/ScrollReveal';
 
 export default function App() {
   return (
@@ -19,28 +23,49 @@ export default function App() {
       <main>
         <Hero />
 
-        <About />
+        <ScrollReveal>
+          <About />
+        </ScrollReveal>
 
-        <CallForPapers />
+        <ScrollReveal>
+          <CallForPapers />
+        </ScrollReveal>
 
-        <Registration />
+        <ScrollReveal>
+          <Registration />
+        </ScrollReveal>
 
-        <ImportantDates />
+        <ScrollReveal>
+          <ImportantDates />
+        </ScrollReveal>
 
-        <section id="speakers" className="section-padding bg-surface-alt">
-          <h2 className="section-title text-white">Speakers</h2>
-          <p className="section-subtitle">Coming in Chunk 6</p>
-        </section>
+        <Schedule />
 
-        <Committee />
-        
-        <Editors />
+        <Speakers />
 
-        <Gallery />
+        <ScrollReveal>
+          <Downloads />
+        </ScrollReveal>
 
-        <Venue />
+        <ScrollReveal>
+          <Committee />
+        </ScrollReveal>
 
-        <Contact />
+        <ScrollReveal>
+          <Editors />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Gallery />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Venue />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Contact />
+        </ScrollReveal>
       </main>
 
       <Footer />

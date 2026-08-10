@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { HiOutlineClipboardDocumentList } from 'react-icons/hi2';
 import { HiOutlineUserAdd } from 'react-icons/hi';
 import { SITE_CONFIG } from '../data/siteConfig';
+import ParticleBackground from './ParticleBackground';
 
 function useCountdown(targetDate) {
   const [timeLeft, setTimeLeft] = useState(calcTime(targetDate));
@@ -41,27 +43,50 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center text-white overflow-hidden bg-transparent"
     >
+      {/* Particle network background */}
+      <ParticleBackground />
+
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-28 text-center mt-10">
         {/* Conference title */}
-        <h1 className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 drop-shadow-lg text-white flex flex-col items-center gap-2">
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="font-[family-name:var(--font-display)] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 drop-shadow-lg text-white flex flex-col items-center gap-2"
+        >
           <span>TECHNO SOCIETAL</span>
           <span className="relative inline-block">
             <span className="absolute inset-0 bg-gradient-to-r from-[var(--color-cyber-cyan)] to-[var(--color-cyber-purple)] blur-xl opacity-80"></span>
             <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-cyber-cyan)] to-[var(--color-cyber-purple)] drop-shadow-sm">2026</span>
           </span>
-        </h1>
+        </motion.h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl font-medium mb-4 drop-shadow-md max-w-3xl mx-auto text-white/90">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="text-lg sm:text-xl md:text-2xl font-medium mb-4 drop-shadow-md max-w-3xl mx-auto text-white/90"
+        >
           {SITE_CONFIG.conferenceFullName}
-        </p>
+        </motion.p>
 
-        <p className="text-xl md:text-2xl italic mb-10 drop-shadow-md text-[var(--color-cyber-magenta)] font-bold">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.25 }}
+          className="text-xl md:text-2xl italic mb-10 drop-shadow-md text-[var(--color-cyber-magenta)] font-bold"
+        >
           <span className="font-semibold">{SITE_CONFIG.dates}</span>
-        </p>
+        </motion.p>
 
         {/* Countdown */}
-        <div className="inline-flex gap-4 sm:gap-6 md:gap-8 glass-panel rounded-2xl px-6 py-5 mb-10">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.35 }}
+          className="inline-flex gap-4 sm:gap-6 md:gap-8 glass-panel rounded-2xl px-6 py-5 mb-10"
+        >
           <CountdownUnit value={countdown.days} label="Days" />
           <span className="text-3xl md:text-5xl font-light text-[var(--color-cyber-cyan)] self-start drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">:</span>
           <CountdownUnit value={countdown.hours} label="Hours" />
@@ -69,10 +94,15 @@ export default function Hero() {
           <CountdownUnit value={countdown.minutes} label="Min" />
           <span className="text-3xl md:text-5xl font-light text-[var(--color-cyber-cyan)] self-start drop-shadow-[0_0_10px_rgba(0,240,255,0.8)]">:</span>
           <CountdownUnit value={countdown.seconds} label="Sec" />
-        </div>
+        </motion.div>
 
         {/* CTA buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.45 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+        >
           <a
             href={SITE_CONFIG.registerUrl}
             target="_blank"
@@ -91,10 +121,15 @@ export default function Hero() {
             <HiOutlineClipboardDocumentList className="w-5 h-5" />
             Submit Paper
           </a>
-        </div>
+        </motion.div>
 
         {/* Organized by */}
-        <div className="space-y-3 mb-6">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.55 }}
+          className="space-y-3 mb-6"
+        >
           <p className="text-base md:text-lg text-[var(--color-cyber-cyan)] font-semibold drop-shadow-md">
             Organized by,
           </p>
@@ -110,28 +145,35 @@ export default function Hero() {
             <br />
             An ISO 9001-2015 Certified Institute, Accredited by the Institution of Engineers, Kolkata and TCS, Pune.
           </p>
-        </div>
+        </motion.div>
 
         {/* Collaboration */}
-        <div className="space-y-1 mb-6 mt-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          className="space-y-1 mb-6 mt-4"
+        >
           <p className="text-sm md:text-base text-white font-bold drop-shadow-md">
             In collaboration with
           </p>
           <p className="text-lg md:text-xl font-bold text-yellow-400 drop-shadow-md">
-            {/* {SITE_CONFIG.collaboration.name}, */}
-            {/* <br /> */}
             {SITE_CONFIG.collaboration.institute}
           </p>
           <p className="text-[var(--color-cyber-cyan)] text-sm">{SITE_CONFIG.collaboration.note}</p>
-        </div>
+        </motion.div>
 
         {/* Accreditation logo row */}
-        <div className="flex items-center justify-center gap-4 md:gap-6 flex-wrap relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.65 }}
+          className="flex items-center justify-center gap-4 md:gap-6 flex-wrap relative z-10"
+        >
           <img src="/sveri-logo.jpg" alt="SVERI" className="h-16 md:h-20 w-auto rounded-xl bg-white/90 p-1 shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
           <img src="/autonomous-logo.jpg" alt="Autonomous" className="h-16 md:h-20 w-auto rounded-xl bg-white/90 p-1 shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
-          {/* <img src="/nba-logo.png" alt="NBA Accredited" className="h-16 md:h-20 w-auto rounded-xl bg-white/90 p-1 shadow-[0_0_15px_rgba(255,255,255,0.2)]" /> */}
           <img src="/naac-logo.png" alt="NAAC A+" className="h-16 md:h-20 w-auto rounded-xl bg-white/90 p-1 shadow-[0_0_15px_rgba(255,255,255,0.2)]" />
-        </div>
+        </motion.div>
       </div>
 
       {/* Bottom gradient fade */}
