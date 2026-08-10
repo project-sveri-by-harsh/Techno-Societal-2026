@@ -27,7 +27,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen ? 'glass-panel !border-t-0 !border-x-0 !rounded-none' : 'navbar-transparent'
       }`}
     >
@@ -43,26 +43,26 @@ export default function Navbar() {
             alt="Techno-Societal 2026"
             className="h-12 md:h-14 w-auto rounded-lg border-2 border-[var(--color-cyber-cyan)]/50 bg-white p-0.5 shadow-[0_0_10px_rgba(0,240,255,0.3)]"
           />
-          <span className="font-[family-name:var(--font-display)] font-bold text-slate-900 dark:text-white text-base md:text-lg tracking-tight hidden sm:flex flex-col items-center leading-none">
+          <span className="font-[family-name:var(--font-display)] font-bold text-slate-900 dark:text-white text-base md:text-lg tracking-tight hidden sm:flex flex-col items-start leading-none">
             <span>TECHNO-SOCIETAL</span>
-            <span className="text-blue-600 dark:text-[var(--color-cyber-cyan)] drop-shadow-md text-xs md:text-sm mt-1">2026</span>
+            <span className="text-blue-600 dark:text-[var(--color-cyber-cyan)] drop-shadow-md text-xs md:text-sm mt-0.5">2026</span>
           </span>
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden lg:flex items-center gap-1 text-xs xl:text-sm">
+        <ul className="hidden lg:flex items-center gap-1 xl:gap-1.5 text-[11px] xl:text-xs font-medium">
           {NAV_LINKS.map(link => (
             <li key={link.href}>
               <a
                 href={link.href}
                 onClick={e => handleNavClick(e, link.href)}
-                className="px-2 xl:px-3 py-2 rounded-md transition-colors whitespace-nowrap text-slate-700 dark:text-white/80 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10"
+                className="px-1.5 xl:px-2 py-1.5 rounded-md transition-colors whitespace-nowrap text-slate-700 dark:text-white/80 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10"
               >
                 {link.label}
               </a>
             </li>
           ))}
-          <li className="ml-2 flex items-center gap-2">
+          <li className="ml-1 xl:ml-3 flex items-center gap-1.5">
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white/80 hover:text-slate-900 dark:hover:text-white transition-colors"

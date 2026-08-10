@@ -41,7 +41,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center text-slate-900 dark:text-white overflow-hidden bg-transparent"
+      className="relative min-h-screen flex items-center justify-center text-slate-900 dark:text-white overflow-hidden bg-transparent -mt-16 md:-mt-[72px]"
     >
       {/* Particle network background */}
       <ParticleBackground />
