@@ -43,7 +43,7 @@ export default function Navbar() {
         scrolled || mobileOpen ? 'glass-panel !border-t-0 !border-x-0 !rounded-none' : 'navbar-transparent'
       }`}
     >
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-6 h-16 md:h-18">
+      <nav className="max-w-[1600px] w-full mx-auto flex items-center justify-between px-4 lg:px-8 h-16 md:h-18">
         {/* Logo + Brand */}
         <a
           href="#home"
@@ -62,19 +62,19 @@ export default function Navbar() {
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden lg:flex items-center gap-1 xl:gap-1.5 text-[11px] xl:text-xs font-medium">
+        <ul className="hidden xl:flex items-center gap-2 2xl:gap-4 text-xs 2xl:text-sm font-medium">
           {NAV_LINKS.map(link => (
             <li key={link.href}>
               <a
                 href={link.href}
                 onClick={e => handleNavClick(e, link.href)}
-                className="px-1.5 xl:px-2 py-1.5 rounded-md transition-colors whitespace-nowrap text-slate-700 dark:text-white/80 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10"
+                className="px-2 2xl:px-3 py-2 rounded-md transition-colors whitespace-nowrap text-slate-700 dark:text-white/80 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200 dark:hover:bg-white/10"
               >
                 {link.label}
               </a>
             </li>
           ))}
-          <li className="ml-1 xl:ml-3 flex items-center gap-1.5">
+          <li className="ml-2 2xl:ml-4 flex items-center gap-2">
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white/80 hover:text-slate-900 dark:hover:text-white transition-colors"
@@ -86,7 +86,7 @@ export default function Navbar() {
               href={SITE_CONFIG.brochureUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[var(--color-cyber-magenta)] hover:bg-[var(--color-cyber-purple)] text-white font-semibold rounded-lg text-xs xl:text-sm transition-all shadow-[0_0_15px_rgba(255,0,234,0.4)] hover:shadow-[0_0_20px_rgba(112,0,255,0.6)] hover:-translate-y-0.5"
+              className="inline-flex items-center gap-1.5 px-3 2xl:px-4 py-2 bg-[var(--color-cyber-magenta)] hover:bg-[var(--color-cyber-purple)] text-white font-semibold rounded-lg text-xs 2xl:text-sm transition-all shadow-[0_0_15px_rgba(255,0,234,0.4)] hover:shadow-[0_0_20px_rgba(112,0,255,0.6)] hover:-translate-y-0.5"
             >
               <HiArrowDownTray className="w-4 h-4" />
               Brochure
@@ -95,7 +95,7 @@ export default function Navbar() {
         </ul>
 
         {/* Mobile toggle */}
-        <div className="lg:hidden flex items-center gap-2">
+        <div className="xl:hidden flex items-center gap-2">
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full bg-slate-200 dark:bg-white/10 text-slate-700 dark:text-white/80 hover:text-slate-900 dark:hover:text-[var(--color-cyber-cyan)] transition-colors"
@@ -115,7 +115,7 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       <div
-        className={`lg:hidden overflow-hidden transition-[max-height] duration-300 ${
+        className={`xl:hidden overflow-hidden transition-[max-height] duration-300 ${
           mobileOpen ? 'max-h-[32rem]' : 'max-h-0'
         }`}
       >
