@@ -19,6 +19,18 @@ export default function Navbar() {
   }, []);
 
   const handleNavClick = (e, href) => {
+    if (href.startsWith('/')) {
+      if (window.location.pathname !== href) {
+        window.location.href = href;
+      }
+      return;
+    }
+
+    if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+      window.location.href = '/' + href;
+      return;
+    }
+
     e.preventDefault();
     setMobileOpen(false);
     const el = document.querySelector(href);

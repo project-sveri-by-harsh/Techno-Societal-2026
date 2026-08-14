@@ -5,12 +5,21 @@ import { SITE_CONFIG } from '../data/siteConfig';
 
 export default function Registration() {
   return (
-    <section id="registration" className="relative py-20 px-4 md:px-8 bg-transparent">
+    <section id="registration" className="relative py-20 px-4 md:px-8 bg-transparent min-h-[60vh] flex flex-col justify-center">
       <div className="max-w-4xl mx-auto">
         <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-3 uppercase tracking-wider">
           Registration
         </h2>
         <div className="w-12 h-1 bg-blue-600 dark:bg-[var(--color-cyber-cyan)] mx-auto mb-16 dark:shadow-[0_0_10px_var(--color-cyber-cyan)]" />
+
+        <div className="mb-16 text-center">
+          <h3 className="text-xl font-bold text-blue-700 dark:text-[var(--color-cyber-cyan)] mb-4 uppercase tracking-wider drop-shadow-sm">
+            Acknowledgment
+          </h3>
+          <p className="text-slate-600 dark:text-white/60 max-w-4xl mx-auto text-sm md:text-base leading-relaxed text-center">
+            &quot;The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.&quot;
+          </p>
+        </div>
 
         <div className="glass-panel rounded-2xl p-8 md:p-12 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent z-0 pointer-events-none" />
@@ -41,14 +50,7 @@ export default function Registration() {
           </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <h3 className="text-xl font-bold text-blue-700 dark:text-[var(--color-cyber-cyan)] mb-4 uppercase tracking-wider drop-shadow-sm">
-            Acknowledgment
-          </h3>
-          <p className="text-slate-600 dark:text-white/60 max-w-4xl mx-auto text-sm md:text-base leading-relaxed text-center">
-            &quot;The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.&quot;
-          </p>
-        </div>
+
         <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href={SITE_CONFIG.registerUrl}
@@ -69,6 +71,8 @@ export default function Registration() {
             Submit Paper
           </a>
         </div>
+
+
       </div>
     </section>
   );

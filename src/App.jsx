@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -18,6 +19,27 @@ import AnnouncementBanner from './components/AnnouncementBanner';
 import ScrollProgress from './components/ScrollProgress';
 
 export default function App() {
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handlePopState = () => setCurrentPath(window.location.pathname);
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  if (currentPath === '/registration') {
+    return (
+      <div className="min-h-screen">
+        <ScrollProgress />
+        <Navbar />
+        <main className="pt-16">
+          <Registration />
+        </main>
+        <Footer />
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen">
       <ScrollProgress />
@@ -33,10 +55,6 @@ export default function App() {
 
         <ScrollReveal>
           <CallForPapers />
-        </ScrollReveal>
-
-        <ScrollReveal>
-          <Registration />
         </ScrollReveal>
 
         <ScrollReveal>
@@ -76,3 +94,4 @@ export default function App() {
     </div>
   );
 }
+

@@ -11,9 +11,9 @@ export default function Contact() {
 
         <div className="glass-panel rounded-2xl p-8 md:p-12 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent z-0 pointer-events-none" />
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center items-center relative z-10">
-            
+
             {/* Address Column */}
             <div className="flex flex-col items-center">
               <h3 className="text-lg font-bold text-blue-700 dark:text-[var(--color-cyber-cyan)] uppercase tracking-widest mb-4 drop-shadow-md">
@@ -33,13 +33,13 @@ export default function Contact() {
                 {/* Note: This generates a standard QR code dynamically. 
                     To use a custom image with a logo, replace the src with e.g. "/whatsapp-qr.png" 
                     after saving your image to the public folder. */}
-                <img 
+                <img
                   src={`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${SITE_CONFIG.whatsappChannelUrl}`}
-                  alt="WhatsApp Channel QR Code" 
+                  alt="WhatsApp Channel QR Code"
                   className="w-32 h-32 md:w-40 md:h-40"
                 />
               </div>
-              <a 
+              <a
                 href={SITE_CONFIG.whatsappChannelUrl}
                 target="_blank"
                 rel="noopener noreferrer"
