@@ -17,6 +17,7 @@ import Editors from './components/Editors';
 import ScrollReveal from './components/ScrollReveal';
 import AnnouncementBanner from './components/AnnouncementBanner';
 import ScrollProgress from './components/ScrollProgress';
+import Acknowledgement from './components/Acknowledgement';
 
 export default function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -27,13 +28,13 @@ export default function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
-  if (currentPath === '/registration') {
+  if (currentPath === '/acknowledgement') {
     return (
       <div className="min-h-screen">
         <ScrollProgress />
         <Navbar />
         <main className="pt-16">
-          <Registration />
+          <Acknowledgement />
         </main>
         <Footer />
       </div>
@@ -55,6 +56,10 @@ export default function App() {
 
         <ScrollReveal>
           <CallForPapers />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Registration />
         </ScrollReveal>
 
         <ScrollReveal>

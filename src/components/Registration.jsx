@@ -5,7 +5,7 @@ import { SITE_CONFIG } from '../data/siteConfig';
 
 export default function Registration() {
   return (
-    <section id="registration" className="relative py-20 px-4 md:px-8 bg-transparent min-h-[60vh] flex flex-col justify-center">
+    <section id="registration" className="relative py-20 px-4 md:px-8 bg-transparent">
       <div className="max-w-4xl mx-auto">
         <h2 className="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold text-center text-slate-900 dark:text-white mb-3 uppercase tracking-wider">
           Registration
@@ -27,27 +27,18 @@ export default function Registration() {
               Detailed information regarding registration fees for different categories (Students, Academia, Industry, International delegates) is available in the official fee structure document.
             </p>
 
-          <a
-            href={SITE_CONFIG.feesDocumentUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-slate-200 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 text-slate-900 dark:text-white font-bold rounded-xl transition-all shadow-sm hover:-translate-y-1 dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]"
-          >
-            <HiOutlineArrowDownTray className="w-6 h-6" />
-            View Fees Details (PDF)
-          </a>
+            <a
+              href={SITE_CONFIG.feesDocumentUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-slate-200 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 text-slate-900 dark:text-white font-bold rounded-xl transition-all shadow-sm hover:-translate-y-1 dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]"
+            >
+              <HiOutlineArrowDownTray className="w-6 h-6" />
+              View Fees Details (PDF)
+            </a>
 
 
           </div>
-        </div>
-
-        <div className="mt-16 mb-8 text-center">
-          <h3 className="text-xl font-bold text-blue-700 dark:text-[var(--color-cyber-cyan)] mb-4 uppercase tracking-wider drop-shadow-sm">
-            Acknowledgment
-          </h3>
-          <p className="text-slate-600 dark:text-white/60 max-w-4xl mx-auto text-sm md:text-base leading-relaxed text-center">
-            &quot;The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.&quot;
-          </p>
         </div>
 
 
@@ -71,8 +62,6 @@ export default function Registration() {
             Submit Paper
           </a>
         </div>
-
-
       </div>
     </section>
   );
