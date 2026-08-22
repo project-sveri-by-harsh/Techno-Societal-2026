@@ -8,8 +8,8 @@ export const SITE_CONFIG = {
   venue: "SVERI's College of Engineering, Pandharpur",
 
   /* [PLACEHOLDER] Replace with actual external URLs */
-  registerUrl: 'https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FTechnoSocietal2026',
-  submitPaperUrl: 'https://cmt3.research.microsoft.com/TechnoSocietal2026',
+  registerUrl: 'https://cmt3.research.microsoft.com/TS2026',
+  submitPaperUrl: 'https://cmt3.research.microsoft.com/TS2026',
   brochureUrl: 'https://drive.google.com/file/d/1kL5ErezB1fvhupdhYDTqY6C5aDhQiptM/view?usp=sharing',
   feesDocumentUrl: 'PASTE_FEES_PDF_LINK_HERE',
   whatsappChannelUrl: 'https://whatsapp.com/channel/0029VbDjbPiD8SE2YnI7RW2z',
