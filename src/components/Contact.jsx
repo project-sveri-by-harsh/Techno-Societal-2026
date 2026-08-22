@@ -56,16 +56,10 @@ export default function Contact() {
               </h3>
               <div className="flex flex-col gap-2">
                 <a 
-                  href="mailto:rrgidde@coe.sveri.ac.in" 
+                  href="mailto:techno@sveri.ac.in" 
                   className="text-[var(--color-cyber-purple)] font-bold hover:text-blue-600 dark:hover:text-white hover:underline transition-colors text-sm md:text-base drop-shadow-md"
                 >
-                  rrgidde@coe.sveri.ac.in
-                </a>
-                <a 
-                  href="mailto:ddronge@coe.sveri.ac.in" 
-                  className="text-[var(--color-cyber-purple)] font-bold hover:text-blue-600 dark:hover:text-white hover:underline transition-colors text-sm md:text-base drop-shadow-md"
-                >
-                  ddronge@coe.sveri.ac.in
+                  techno@sveri.ac.in
                 </a>
               </div>
             </div>
