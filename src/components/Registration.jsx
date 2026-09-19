@@ -23,19 +23,48 @@ export default function Registration() {
               Registration Fees
             </h3>
 
-            <p className="text-slate-700 dark:text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-              Detailed information regarding registration fees for different categories (Students, Academia, Industry, International delegates) is available in the official fee structure document.
+            <p className="text-slate-700 dark:text-white/70 mb-6 max-w-2xl mx-auto leading-relaxed">
+              Detailed information regarding registration fees for different categories (Students, Academia, Industry, International delegates) is as below.
             </p>
 
-            <a
-              href={SITE_CONFIG.feesDocumentUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-slate-200 dark:bg-white/10 hover:bg-slate-300 dark:hover:bg-white/20 text-slate-900 dark:text-white font-bold rounded-xl transition-all shadow-sm hover:-translate-y-1 dark:hover:shadow-[0_0_15px_rgba(255,255,255,0.2)]"
-            >
-              <HiOutlineArrowDownTray className="w-6 h-6" />
-              View Fees Details (PDF)
-            </a>
+            <div className="w-full mb-6 rounded-xl border border-slate-300 dark:border-white/10 shadow-lg overflow-hidden">
+              <table className="w-full text-left border-collapse">
+                <thead>
+                  <tr className="bg-blue-600/10 dark:bg-[var(--color-cyber-cyan)]/20 text-slate-900 dark:text-white">
+                    <th className="p-4 border border-slate-300 dark:border-white/10 font-bold">Category</th>
+                    <th className="p-4 border border-slate-300 dark:border-white/10 font-bold">UG / Diploma Student Poster / Paper</th>
+                    <th className="p-4 border border-slate-300 dark:border-white/10 font-bold">PG / PhD Scholars</th>
+                    <th className="p-4 border border-slate-300 dark:border-white/10 font-bold">Academicians</th>
+                    <th className="p-4 border border-slate-300 dark:border-white/10 font-bold">Industry</th>
+                    <th className="p-4 border border-slate-300 dark:border-white/10 font-bold">Foreigner</th>
+                  </tr>
+                </thead>
+                <tbody className="text-slate-700 dark:text-white/80">
+                  <tr className="bg-slate-50 dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
+                    <td className="p-4 border border-slate-300 dark:border-white/10 font-semibold">Author / Attendee</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">2000/-</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">3000/-</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">4000/-</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">10000/-</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">Nil</td>
+                  </tr>
+                  <tr className="bg-transparent hover:bg-slate-100 dark:hover:bg-white/10 transition-colors">
+                    <td className="p-4 border border-slate-300 dark:border-white/10 font-semibold">Additional Registration</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">Nil</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">2000/-</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">2000/-</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">5000/-</td>
+                    <td className="p-4 border border-slate-300 dark:border-white/10">Nil</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p className="text-[15px] font-semibold text-[var(--color-cyber-magenta)] dark:text-[var(--color-cyber-magenta)] mb-8 drop-shadow-sm">
+              * Registration is subjected to acceptance of paper.
+            </p>
+
+
 
 
           </div>
