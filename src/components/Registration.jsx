@@ -27,8 +27,8 @@ export default function Registration() {
               Detailed information regarding registration fees for different categories (Students, Academia, Industry, International delegates) is as below.
             </p>
 
-            <div className="w-full mb-6 rounded-xl border border-slate-300 dark:border-white/10 shadow-lg overflow-hidden">
-              <table className="w-full text-left border-collapse">
+            <div className="w-full mb-6 rounded-xl border border-slate-300 dark:border-white/10 shadow-lg overflow-x-auto md:overflow-hidden">
+              <table className="w-full min-w-[600px] md:min-w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-blue-600/10 dark:bg-[var(--color-cyber-cyan)]/20 text-slate-900 dark:text-white">
                     <th className="p-4 border border-slate-300 dark:border-white/10 font-bold">Category</th>
@@ -59,6 +59,10 @@ export default function Registration() {
                 </tbody>
               </table>
             </div>
+
+            <p className="md:hidden text-sm text-slate-500 dark:text-white/70 mb-4 text-center italic animate-pulse">
+              Slide right to see more →
+            </p>
 
             <p className="text-[15px] font-semibold text-[var(--color-cyber-magenta)] dark:text-[var(--color-cyber-magenta)] mb-8 drop-shadow-sm">
               * Registration is subjected to acceptance of paper.
